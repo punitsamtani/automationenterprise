@@ -29,7 +29,7 @@ node('master'){
     }
 	
 stage('Build') {
-     withMaven(jdk: 'JDK', maven: 'maven3', mavenLocalRepo: '', mavenOpts: '', mavenSettingsFilePath: '') 
+     withMaven() 
      {
             sh "mvn test"
         }      
