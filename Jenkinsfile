@@ -29,8 +29,9 @@ node('master'){
     }
 	
 stage('Build') {
-     withMaven(jdk: 'JDK', maven: 'maven3', mavenLocalRepo: '', mavenOpts: '', mavenSettingsFilePath: '') {
-            sh "mvn test”
+     withMaven(jdk: 'JDK', maven: 'maven3', mavenLocalRepo: '', mavenOpts: '', mavenSettingsFilePath: '') 
+     {
+            sh "mvn test"
         }      
     }	
 stage('UploadResults'){
