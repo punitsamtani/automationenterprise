@@ -29,7 +29,7 @@ node('master'){
     }
 	
 stage('Build') {
-     withMaven() 
+     withMaven(jdk: 'JDK', maven: 'maven3') 
      {
             sh "mvn test"
         }      
