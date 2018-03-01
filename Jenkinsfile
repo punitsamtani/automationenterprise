@@ -29,10 +29,10 @@ node('master'){
     }
 	
 stage('Build') {
-load(workSpaceHome + "/config.groovy")
-     mvn test     
-    }	
-	stage('UploadResults'){
+     withMaven(jdk: 'JDK', maven: 'maven3', mavenLocalRepo: '', mavenOpts: '', mavenSettingsFilePath: '') {
+            sh "mvn test”
+        }      
+    }	stage('UploadResults'){
 		load(workSpaceHome + "/config.groovy")
 		echo "Uploading Test Result File.........."
 		String baseurl="${baseUrl}"
