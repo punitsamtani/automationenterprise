@@ -29,6 +29,7 @@ node('master'){
     }
 	
 stage('Build') {
+load(workSpaceHome + "/config.groovy")
      mvn test     
     }	
 	stage('UploadResults'){
