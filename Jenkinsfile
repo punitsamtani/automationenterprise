@@ -28,8 +28,8 @@ node('master'){
         checkout scm
     }
 	
-stage('Build') {
-     withMaven(jdk: 'JDK', maven: 'maven3') 
+    stage('Build') {
+     withMaven(jdk: 'jdk', maven: 'maven3') 
      {
             sh "mvn test"
         }      
