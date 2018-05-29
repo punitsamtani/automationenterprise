@@ -29,6 +29,7 @@ node('master'){
     }
 	
     stage('Build') {
+	    build job: 'FreeStyle_TestNG_Demo'
      withMaven(jdk: 'jdk', maven: 'maven3') 
      {
             sh "mvn test"
