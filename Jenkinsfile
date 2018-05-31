@@ -19,6 +19,7 @@ import org.json.*;
 
 node('master'){
 	def workSpaceHome = pwd()
+	build job: 'FreeStyle_TestNG_Demo', parameters: [string(name: 'Result File(s) Path/Directory', value: '/target/surefire-reports/testng-results.xml')]
 	
     stage('Clean') {
         deleteDir()
