@@ -1,7 +1,7 @@
 Feature: Language Translation
     As a user,
     I want to see application labels and messages in my own language
-    So that I can understand what the application is saying.
+    So that I can understand what the application is saying
 Background: 
 Given the following languages exist:
   | Name    | Culture |
@@ -11,11 +11,11 @@ Given the following languages exist:
 And the following translations exist:
   | Language | Key                 | Translation             |
   | English  | Invalid Login       | Invalid Login           |
-  | Polish   | Invalid Login       | NieprawidÃ?owy 
+  | Polish   | Invalid Login       | NieprawidÃÂ?owy 
   | Italian  | Invalid Login       | Login non valido        |
   | English  | Site is Unavailable | Invalid Login           |
-  | Polish   | Site is Unavailable | Strona jest niedostÃ?pna |
-  | Italian  | Site is Unavailable | Sito non ÃÂ¨ disponibile  |
+  | Polish   | Site is Unavailable | Strona jest niedostÃÂ?pna |
+  | Italian  | Site is Unavailable | Sito non ÃÂÃÂ¨ disponibile  |
 And the following sites exist:
   | Name         | DefaultLanguage |
   | Test Site #1 | English         | 
@@ -34,7 +34,7 @@ Scenario: Receive a Message in my Site Set Language
     Given I am the user "pjones"
         And my site language is set to "Polish"
     When the system sends the message "Invalid Login"
-    Then I should see the error message "NieprawidÃ?owy login"
+    Then I should see the error message "NieprawidÃÂ?owy login"
 
 Scenario: Change the language I use
     Given I am the user "dmesserski"
