@@ -1,7 +1,7 @@
 Feature: Language Translation
     As a user,
     I want to see application labels and messages in my own language
-    So that I can understand what the application is saying
+    So that I can understand what the application is saying.
 Background: 
 Given the following languages exist:
   | Name    | Culture |
